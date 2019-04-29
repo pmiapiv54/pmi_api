@@ -5,7 +5,11 @@ $kode = 'kode';
 /*$data= [
     'nama' => 'Juminten Of The world',
     'kode' => 'kode_user',
+    'password' => '1234',
 ];*/
+
+$password = substr( $data['password'] ,0 ,3 ).'*********';
+
 ?>
 <table bgcolor="#EFF2F4" style="background-color: #EFF2F4!important;border-collapse: collapse;border-spacing: 0;width: 100%;font-family: Arial,sans-serif;color: #576574!important;font-size: 24px;line-height: 28px;text-align: center;margin: 0;padding: 0;">
     <tbody>
@@ -58,7 +62,7 @@ $kode = 'kode';
                                                                         <tr style="vertical-align: top;">
                                                                             <td>Password</td>
                                                                             <td>:</td>
-                                                                            <td><b>{{ $data['password'] }}</b></td>
+                                                                            <td><b>{{ $password }}</b></td>
                                                                         </tr>
                                                                     </table>                                                              
 

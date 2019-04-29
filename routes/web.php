@@ -13,6 +13,7 @@
 
 $app->get('/', function () use ($app) {
     return $app->version();
+    // return view('email.register');
 });
 
 $app->group(['prefix' => 'api/'], function ($app) {

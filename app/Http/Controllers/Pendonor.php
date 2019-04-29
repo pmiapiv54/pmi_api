@@ -90,17 +90,17 @@ class Pendonor extends Controller
                                 ['um.user_username','=',$kode],
                             ])
                     ->join('pmi_cendana.users_mobile as um','um.user_username','=','p.Kode')
-                    ->get();
+                    ->get()[0];
 
                 $msg = 'Succesfully';
                 $res_status = True;
-                $status_msg = $msg.' Update Profile'. $kode;
+                $status_msg = $msg.' Update Profile '. $kode;
 
             }else{
 
                 $msg = 'Failed';
                 $res_status = False;
-                $status_msg = 'Galat Update Profile';
+                $status_msg = 'Gagal Update Profile';
 
             }
 
